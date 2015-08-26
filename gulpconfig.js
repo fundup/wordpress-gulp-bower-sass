@@ -1,12 +1,12 @@
 // ==== CONFIGURATION ==== //
 
 // Project paths
-var project     = 'voidx'
+var project     = 'BBTheme'
   , src         = './src/'
   , build       = './build/'
   , dist        = './dist/'+project+'/'
   , bower       = './bower_components/'
-  , composer    = './vendor/'
+  , vendor    = './src/vendor/'
 ;
 
 // Project settings
@@ -25,7 +25,7 @@ module.exports = {
   , notify: false // In-line notifications (the blocks of text saying whether you are connected to the BrowserSync server or not)
   , open: true // Set to false if you don't like the browser window opening automatically
   , port: 3000 // Port number for the live version of the site; default: 3000
-  , proxy: 'localhost:8080' // Using a proxy instead of the built-in server as we have server-side rendering to do via WordPress
+  , proxy: 'elowp.dev' // Using a proxy instead of the built-in server as we have server-side rendering to do via WordPress
   , watchOptions: {
       debounceDelay: 2000 // Delay for events called in succession for the same file/event
     }
@@ -58,7 +58,7 @@ module.exports = {
     }
   , chunks: { // Chunks are arrays of globs matching source files that combine to provide specific functionality
       core: [src+'js/responsive-menu.js', src+'js/core.js']
-    , pg8: [bower+'html5-history-api/history.js', bower+'spin.js/spin.js', bower+'spin.js/jquery.spin.js', bower+'wp-ajax-page-loader/wp-ajax-page-loader.js', src+'js/page-loader.js']
+    , pg8: [vendor+'jquery/dist/jquery.min.js', vendor+'bootstrap-sass-official/assets/javascripts/bootstrap.min.js']
     }
   , dest: build+'js/' // Where the scripts end up
   , lint: {

@@ -1,3 +1,10 @@
+# FORK OF WORDPRESS-GULP-BOWER-SASS STARTER KIT
+I add on this fork bootsrap 3 and src/ is modify for boostrap 3.
+
+To symlink on linux :
+sudo ln -s /var/www/myClone/build/*  /var/www/wordpress/wp-content/themes/Mytheme
+
+
 # WORDPRESS-GULP-BOWER-SASS STARTER KIT
 
 Designing WordPress themes the old-fashioned way is time-consuming and error-prone. Automating the build process allows us to integrate best practices into our workflow while saving time. This project is a *starter kit* for developing highly optimized WordPress themes with [Gulp](http://gulpjs.com/), [Bower](http://bower.io/), and [Sass](http://sass-lang.com/). This is *not* meant to be a starter theme or framework (although I have included a *minimum viable theme* to demonstrate some of the possibilities). It is, instead, a kind of *project scaffolding* and *example workflow* for modern and efficient WordPress theme development.

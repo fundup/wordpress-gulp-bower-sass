@@ -1,18 +1,18 @@
 <?php get_header(); ?>
-  <div id="wrap-content" class="wrap-content">
-    <div id="content" class="site-content">
-      <section id="primary" class="content-area">
-        <main id="main" class="site-main" role="main">
+
+  <div id="main-content" class="row">
+      <section id="primary" class="row">
+        <main id="main" class="col-md-6" role="main">
         <?php if ( have_posts() ) {
           while ( have_posts() ) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
-              <header class="entry-header">
+              <div class="entry-header">
                 <h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-              </header>
-              <footer class="entry-meta">
+              </div>
+              <div class="entry-meta">
                 <?php printf( __( 'Posted on %1$s by %2$s. ', 'voidx' ), get_the_date(), get_the_author() ); ?>
                 <?php _e( 'Categories: ', 'voidx' ); the_category( ', ' ); echo '. '; ?>
-              </footer>
+              </div>
               <div class="entry-content">
                 <?php the_content(); ?>
                 <?php wp_link_pages(); ?>
@@ -31,9 +31,10 @@
           </article>
         <?php } ?>
         </main>
+
         <?php voidx_post_navigation(); ?>
+
+        <?php get_sidebar(); ?>
       </section>
-    </div>
   </div>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
