@@ -54,3 +54,8 @@ function voidx_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'voidx_widgets_init' );
+
+//security on WordPress
+remove_action("wp_head", "wp_generator");
+add_filter('login_errors',create_function('$a', "return null;"));
+define('DISALLOW_FILE_EDIT',true);
