@@ -74,8 +74,11 @@ ServerSignature Off
   <filesmatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
   Header unset Cache-Control
   </filesmatch>
+
+  ## ENABLE KEEP ALIVE ##
+  Header set Connection keep-alive
 </ifmodule>
-# END Cache-Control Headers
+
 
 <FilesMatch "\\.(js|css|html|htm|php|xml)$">
   SetOutputFilter DEFLATE
